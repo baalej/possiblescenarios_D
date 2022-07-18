@@ -1,0 +1,6 @@
+title: Frontpage
+sections:
+  picture:
+    type: files
+    layout: cards
+    max: 1

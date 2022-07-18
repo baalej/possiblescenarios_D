@@ -1,0 +1,150 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'monaco', monospace;
+	font-size: 12.5px;
+}
+
+h1 {
+	font-size: 1em;
+	font-weight: normal;
+	margin: 16px 8px;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+header {
+	position: sticky;
+	top: 16px;
+}
+
+footer {
+	margin: 16px 8px;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+/* #title {
+
+} */
+
+#clear {
+	display: none;
+	color: red;
+}
+
+.tag {
+	cursor: pointer;
+}
+
+.image-tag {
+	cursor: pointer;
+	display: none;
+}
+
+.image-tag:hover {
+	color: #0f0;
+}
+
+#tags {
+	margin: 16px 8px;
+}
+
+#gallery {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 16px 8px;
+}
+
+.image-wrapper {
+	width: 216px;
+	height: auto;
+	/*display: none;*/
+}
+
+.projectResource {
+	/*width: auto;*/
+	/*height: 4vw;*/
+	/*display: none;*/
+	width: 56px;
+	align-self: center;
+	-webkit-text-size-adjust: none;
+}
+
+.text {
+	font-size: 1px;
+	padding: 1em;
+	height: 78.96px;
+	overflow: scroll;
+	/*border: 1px solid #eee;*/
+	background-color: #f9f9f9B3;
+}
+
+.text p {
+	pointer-events: none;
+}
+
+.no-break {
+	white-space: nowrap;
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.select {
+	cursor: pointer;
+}
+
+.select:hover {
+	background-color: #ff8 !important;
+}
+
+.disabled {
+	pointer-events: none;
+	color: #eee !important;
+}
+
+.highlight {
+	background-color: #ff8 !important;
+}
+
+#intro {
+	width: 100vw;
+	height: 100vh;
+	padding: 16px;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: white;
+	cursor: pointer;
+}
+
+#intro-image {
+	max-width: 360px;
+	max-height: 360px;
+	width: auto;
+	height: auto;
+	position: fixed;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 480px) {
+  header {
+    position: relative;
+		top: 0;
+  }
+}

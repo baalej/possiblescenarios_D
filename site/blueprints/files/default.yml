@@ -1,0 +1,24 @@
+title: Project File
+sections:
+  content:
+    type: fields
+    fields:
+      materials:
+        label: Materials
+        type: tags
+      keywords:
+        label: Keywords
+        type: tags
+        help: Cave, Entropy, Elevation, Fabrication, Output, Process, Prototype...
+      collaborators:
+        label: Collaborators
+        type: tags
+      imageType:
+        label: Type of Image
+        type: tags
+        help: Axonometric, Detail, Drawing, Film, Map, Plan, Timeline...
+      fileType:
+        label: Type of File
+        type: tags
+        help: img, dwg...
+
