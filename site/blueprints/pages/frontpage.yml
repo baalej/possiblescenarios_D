@@ -3,4 +3,9 @@ sections:
   picture:
     type: files
     layout: cards
-    max: 1
+    max: 20
+  content:
+    type: fields
+    fields:
+      about:
+        type: textarea

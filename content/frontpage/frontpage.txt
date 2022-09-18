@@ -1,1 +1,5 @@
 Title: frontpage
+
+----
+
+About: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora deleniti pariatur nobis natus obcaecati quidem asperiores dignissimos, nemo minima at, cupiditate facere voluptatum, voluptate dolores? Ullam animi ipsam quidem esse.

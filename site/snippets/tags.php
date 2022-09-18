@@ -72,9 +72,9 @@
 		$temp = '';
 
 		foreach ($projects as $project) {
-			$images = $project->images();
+			$files = $project->files();
 			
-			foreach ($images as $item) {
+			foreach ($files as $item) {
 				if ($item->ImageType()->isNotEmpty()) {
 					// if there is more than on is split using ", "
 					$temp .= $item->ImageType() . ", ";
@@ -105,9 +105,9 @@
 		$temp = '';
 
 		foreach ($projects as $project) {
-			$images = $project->images();
+			$files = $project->files();
 			
-			foreach ($images as $item) {
+			foreach ($files as $item) {
 				if ($item->Materials()->isNotEmpty()) {
 					// if there is more than on is split using ", "
 					$temp .= $item->Materials() . ", ";
@@ -138,9 +138,9 @@
 		$temp = '';
 
 		foreach ($projects as $project) {
-			$images = $project->images();
+			$files = $project->files();
 			
-			foreach ($images as $item) {
+			foreach ($files as $item) {
 				if ($item->Collaborators()->isNotEmpty()) {
 					// if there is more than on is split using ", "
 					$temp .= $item->Collaborators() . ", ";
@@ -171,9 +171,9 @@
 		$temp = '';
 
 		foreach ($projects as $project) {
-			$images = $project->images();
+			$files = $project->files();
 			
-			foreach ($images as $item) {
+			foreach ($files as $item) {
 				if ($item->FileType()->isNotEmpty()) {
 					// if there is more than on is split using ", "
 					$temp .= $item->FileType() . ", ";
@@ -204,9 +204,9 @@
 		$temp = '';
 
 		foreach ($projects as $project) {
-			$images = $project->images();
+			$files = $project->files();
 			
-			foreach ($images as $item) {
+			foreach ($files as $item) {
 				if ($item->Keywords()->isNotEmpty()) {
 					// if there is more than on is split using ", "
 					$temp .= $item->Keywords() . ", ";

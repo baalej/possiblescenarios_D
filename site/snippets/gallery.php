@@ -89,42 +89,76 @@
 					$TAGS[] = $item;
 				}
 			}
+			
+			// Which type of file is?
+			if ($image->type() == 'video') { // video
+				?>
 
-			$image100 = $image->srcset('100vw');
-			$image300 = $image->srcset('300vw');
-			$image600 = $image->srcset('600vw');
-			$image900 = $image->srcset('900vw');
-			$image1200 = $image->srcset('1200vw');
-			$image2000 = $image->srcset('2000vw');
+				<video class="projectResource image video" src="<?= $image->url() ?>" data-alt="<?php 
 
+				$numItems = count($TAGS);
+				$i = 0;
 
-			?>
-
-			<img class="projectResource image" data-alt="<?php 
-
-			$numItems = count($TAGS);
-			$i = 0;
-
-			foreach ($TAGS as $tag) {
-				if (++$i === $numItems) {
-					$tagClass = (str_replace(' ', '-', strtolower($tag)));
-					echo "$tagClass";
-				} else {
-					$tagClass = (str_replace(' ', '-', strtolower($tag)));
-					echo "$tagClass ";
+				foreach ($TAGS as $tag) {
+					if (++$i === $numItems) {
+						$tagClass = (str_replace(' ', '-', strtolower($tag)));
+						echo "$tagClass";
+					} else {
+						$tagClass = (str_replace(' ', '-', strtolower($tag)));
+						echo "$tagClass ";
+					}
 				}
-			}
 
-			?>" src="<?= $image600 ?>" srcset="<?= $image->srcset([100, 300, 600]) ?>" alt="project image">
+				?>" loop></video>
 
-			<?php
+				<?php
 
+				// reset array
+				unset($TAGS);
+				$TAGS = array();
+
+			} else { // image
+				$image100 = $image->srcset('100vw');
+				$image300 = $image->srcset('300vw');
+				$image600 = $image->srcset('600vw');
+				$image900 = $image->srcset('900vw');
+				// $image1200 = $image->srcset('1200vw');
+				// $image2000 = $image->srcset('2000vw');
+
+				?>
+
+				<img class="projectResource image" onclick="zoomInImage(event)" data-alt="<?php 
+
+				$numItems = count($TAGS);
+				$i = 0;
+
+				foreach ($TAGS as $tag) {
+					if (++$i === $numItems) {
+						$tagClass = (str_replace(' ', '-', strtolower($tag)));
+						echo "$tagClass";
+					} else {
+						$tagClass = (str_replace(' ', '-', strtolower($tag)));
+						echo "$tagClass ";
+					}
+				}
+
+				?>" src="<?= $image->url() ?>" srcset="<?= $image->srcset([100, 300, 600]) ?>" alt="project image">
+
+				<?php 
+			
 			// reset array
 			unset($TAGS);
 			$TAGS = array();
+			
+			} // end of if file type ?>
+
+			<?php
 
 		}
 	}
 
 	?>
+</div>
+<div id="slideshow" onclick="slideshowAction(event)">
+	<!-- add images js here -->
 </div>

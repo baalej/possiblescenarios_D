@@ -61,7 +61,7 @@ footer a:hover {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 8px;
-	margin: 16px 8px;
+	margin: 16px 0 16px 8px;
 }
 
 .image-wrapper {
@@ -70,22 +70,41 @@ footer a:hover {
 	/*display: none;*/
 }
 
-.projectResource {
-	/*width: auto;*/
-	/*height: 4vw;*/
-	/*display: none;*/
-	width: 56px;
+.projectResource {	
 	align-self: center;
 	-webkit-text-size-adjust: none;
 }
 
+.image {
+	max-height: 56px;
+	max-width: 56px;
+	height: auto;
+	width: auto;
+	cursor: zoom-in;
+}
+
+.video {
+	/* z-index: 1; */
+}
+
 .text {
+	font-family: 'Times New Roman', Times, serif;
 	font-size: 1px;
-	padding: 1em;
-	height: 78.96px;
-	overflow: scroll;
+	line-height: 1.3em;
+	padding: 5em;
+
+	width: 39px;
+	height: 56px;
+	overflow-y: scroll;
+	/* width: auto; */
+
+	/* overflow: scroll; */
 	/*border: 1px solid #eee;*/
 	background-color: #f9f9f9B3;
+}
+
+.text::-webkit-scrollbar {
+	display: none;
 }
 
 .text p {
@@ -104,9 +123,11 @@ footer a:hover {
 
 .select {
 	cursor: pointer;
+	transition: 0.15s background-color;
 }
 
 .select:hover {
+	transition: 0.15s background-color;
 	background-color: #ff8 !important;
 }
 
@@ -116,6 +137,7 @@ footer a:hover {
 }
 
 .highlight {
+	transition: 0.15s background-color;
 	background-color: #ff8 !important;
 }
 
@@ -129,6 +151,7 @@ footer a:hover {
 	left: 0;
 	background-color: white;
 	cursor: pointer;
+	z-index: 99;
 }
 
 #intro-image {
@@ -137,9 +160,51 @@ footer a:hover {
 	width: auto;
 	height: auto;
 	position: fixed;
-	top: 50vh;
+	top: 48vh;
 	left: 50vw;
 	transform: translate(-50%, -50%);
+}
+
+#intro-text {
+	position: fixed;
+	bottom: 8px;
+	left: 16px;
+	max-width: 640px;
+	font-family: Helvetica, sans-serif;
+	font-size: 1.4em;
+}
+
+#slideshow {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+
+.image-slideshow {
+	height: auto;
+	width: auto;
+	max-width: 100vw;
+	max-height: 100vh;
+	object-fit: contain;
+	cursor: e-resize;
+}
+
+#clearTags {
+	display: none;
+	cursor: pointer;
+	color: #000;
+	transition: 0.15s color;
+}
+
+#clearTags:hover {
+	color: #ff0000;
+	transition: 0.15s color;
 }
 
 @media only screen and (max-width: 480px) {

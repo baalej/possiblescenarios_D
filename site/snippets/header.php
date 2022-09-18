@@ -13,7 +13,7 @@
 <body>
 	<?php snippet('intro') ?>
 	<header>
-		<h1><a href="<?php echo $site->url(); ?>" id="title"><?php echo $site->title(); ?></a> /</h1>
+		<h1><a href="<?php echo $site->url(); ?>" id="title"><?php echo $site->title(); ?></a> / <span id="clearTags" onclick="clearTags()">clear tags</span></h1>
 		<!-- import tags -->
 		<?php snippet('tags'); ?>
 	</header>
